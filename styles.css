@@ -4,6 +4,18 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+}
+
+.cursor {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    pointer-events: none;
+    z-index: 1000;
+    transform: translate(-50%, -50%);
 }
 
 .neon-header {
@@ -36,12 +48,17 @@ body {
     margin: 20px 0;
 }
 
-.skills, .mini-projects, .full-projects, .social-media {
+.intro {
+    text-align: center;
+    padding: 20px;
+}
+
+.skills, .mini-projects, .full-projects, .social-media, .hobbies {
     padding: 20px;
     text-align: center;
 }
 
-.skills-cards, .project-cards, .icons {
+.skills-cards, .project-cards, .icons, .hobbies-cards {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -55,6 +72,7 @@ body {
     padding: 10px;
     width: 150px;
     text-align: center;
+    transform-style: preserve-3d;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -64,7 +82,7 @@ body {
 }
 
 .card:hover {
-    transform: scale(1.1);
+    transform: scale(1.1) rotateY(360deg);
     box-shadow: 0 0 20px #39ff14;
 }
 
@@ -79,8 +97,37 @@ body {
     box-shadow: 0 0 20px #39ff14;
 }
 
-.neon-animation {
+.neon-arrow {
     color: #39ff14;
     text-shadow: 0 0 20px #39ff14;
-    animation: neon-glow 1.5s infinite alternate;
+}
+
+.load-more {
+    background-color: #39ff14;
+    border: none;
+    padding: 10px 20px;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.load-more:hover {
+    background-color: #32cd32;
+    box-shadow: 0 0 20px #32cd32;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.hobbies-cards .card {
+    animation: float 3s ease-in-out infinite;
 }
