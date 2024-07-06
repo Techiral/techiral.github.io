@@ -1,0 +1,86 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.neon-header {
+    text-align: center;
+    padding: 20px;
+}
+
+.neon-header h1 {
+    font-size: 3em;
+    color: #39ff14;
+    text-shadow: 0 0 20px #39ff14;
+    animation: neon-glow 1.5s infinite alternate;
+}
+
+@keyframes neon-glow {
+    from {
+        text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 15px #39ff14, 0 0 20px #39ff14;
+    }
+    to {
+        text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14, 0 0 40px #39ff14;
+    }
+}
+
+.neon-heading {
+    text-align: center;
+    font-size: 2em;
+    color: #39ff14;
+    text-shadow: 0 0 20px #39ff14;
+    animation: neon-glow 1.5s infinite alternate;
+    margin: 20px 0;
+}
+
+.skills, .mini-projects, .full-projects, .social-media {
+    padding: 20px;
+    text-align: center;
+}
+
+.skills-cards, .project-cards, .icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #111;
+    border: 2px solid #39ff14;
+    border-radius: 10px;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100px;
+    height: auto;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #39ff14;
+}
+
+.icons a img {
+    width: 50px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icons a img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #39ff14;
+}
+
+.neon-animation {
+    color: #39ff14;
+    text-shadow: 0 0 20px #39ff14;
+    animation: neon-glow 1.5s infinite alternate;
+}
