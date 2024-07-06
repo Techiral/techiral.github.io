@@ -40,7 +40,7 @@ body {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background: linear-gradient(45deg, red, green, blue);
+    background: linear-gradient(45deg, red, green, blue, purple);
     animation: loading-bounce 0.6s infinite alternate;
 }
 
@@ -79,18 +79,18 @@ body {
 
 @keyframes neon-glow {
     from {
-        text-shadow: 0 0 5px red, 0 0 10px green, 0 0 15px blue, 0 0 20px red;
+        text-shadow: 0 0 5px red, 0 0 10px green, 0 0 15px blue, 0 0 20px purple;
     }
     to {
-        text-shadow: 0 0 10px green, 0 0 20px blue, 0 0 30px red, 0 0 40px green;
+        text-shadow: 0 0 10px green, 0 0 20px blue, 0 0 30px purple, 0 0 40px red;
     }
 }
 
 .neon-heading {
     text-align: center;
     font-size: 2em;
-    color: red;
-    text-shadow: 0 0 20px red;
+    color: purple;
+    text-shadow: 0 0 20px purple;
     animation: neon-glow 1.5s infinite alternate;
     margin: 20px 0;
 }
@@ -112,8 +112,8 @@ body {
         text-shadow: 0 0 10px red;
     }
     to {
-        color: blue;
-        text-shadow: 0 0 10px blue;
+        color: purple;
+        text-shadow: 0 0 10px purple;
     }
 }
 
@@ -172,7 +172,7 @@ body {
 
 .card:hover {
     transform: scale(1.1) rotateY(360deg);
-    box-shadow: 0 0 20px red, 0 0 20px green, 0 0 20px blue;
+    box-shadow: 0 0 20px red, 0 0 20px green, 0 0 20px blue, 0 0 20px purple;
 }
 
 .icons a img {
@@ -183,7 +183,7 @@ body {
 
 .icons a img:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 20px red, 0 0 20px green, 0 0 20px blue;
+    box-shadow: 0 0 20px red, 0 0 20px green, 0 0 20px blue, 0 0 20px purple;
 }
 
 .load-more {
@@ -199,7 +199,7 @@ body {
 
 .load-more:hover {
     background-color: green;
-    box-shadow: 0 0 20px blue;
+    box-shadow: 0 0 20px blue, 0 0 20px purple;
 }
 
 .hobbies-cards .card img {
@@ -211,5 +211,5 @@ body {
 
 .hobbies-cards .card:hover img {
     transform: scale(1.1) rotateY(360deg);
-    box-shadow: 0 0 20px red, 0 0 20px green, 0 0 20px blue;
+    box-shadow: 0 0 20px red, 0 0 20px green, 0 0 20px blue, 0 0 20px purple;
 }
