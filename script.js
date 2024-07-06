@@ -1,9 +1,15 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     // Custom cursor
     const cursor = document.querySelector('.cursor');
     document.addEventListener('mousemove', e => {
         cursor.style.top = `${e.clientY}px`;
         cursor.style.left = `${e.clientX}px`;
+    });
+
+    // Loading screen
+    const loadingScreen = document.getElementById('loading-screen');
+    window.addEventListener('load', () => {
+        loadingScreen.style.display = 'none';
     });
 
     // Load more button functionality
