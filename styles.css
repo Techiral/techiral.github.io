@@ -100,6 +100,38 @@ body {
     padding: 20px;
 }
 
+.intro p {
+    font-size: 1.5em;
+    color: white;
+    animation: rgb-glow 2s infinite alternate;
+}
+
+@keyframes rgb-glow {
+    from {
+        color: red;
+        text-shadow: 0 0 10px red;
+    }
+    to {
+        color: blue;
+        text-shadow: 0 0 10px blue;
+    }
+}
+
+.neon-arrow {
+    animation: arrow-glow 2s infinite alternate;
+}
+
+@keyframes arrow-glow {
+    from {
+        color: red;
+        text-shadow: 0 0 10px red;
+    }
+    to {
+        color: green;
+        text-shadow: 0 0 10px green;
+    }
+}
+
 .skills, .mini-projects, .full-projects, .social-media, .hobbies {
     padding: 20px;
     text-align: center;
@@ -121,6 +153,16 @@ body {
     text-align: center;
     transform-style: preserve-3d;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: float 3s infinite alternate;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
 }
 
 .card img {
@@ -130,7 +172,7 @@ body {
 
 .card:hover {
     transform: scale(1.1) rotateY(360deg);
-    box-shadow: 0 0 20px red;
+    box-shadow: 0 0 20px red, 0 0 20px green, 0 0 20px blue;
 }
 
 .icons a img {
@@ -141,7 +183,7 @@ body {
 
 .icons a img:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 20px red;
+    box-shadow: 0 0 20px red, 0 0 20px green, 0 0 20px blue;
 }
 
 .load-more {
@@ -169,5 +211,5 @@ body {
 
 .hobbies-cards .card:hover img {
     transform: scale(1.1) rotateY(360deg);
-    box-shadow: 0 0 20px red;
+    box-shadow: 0 0 20px red, 0 0 20px green, 0 0 20px blue;
 }
